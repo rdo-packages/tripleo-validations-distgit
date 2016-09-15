@@ -8,7 +8,7 @@ Version:        XXX
 Release:        XXX
 License:        ASL 2.0
 URL:            http://tripleo.org
-Source0:        http://tarballs.openstack.org/tripleo-validations/tripleo-validations-%{version}.tar.gz
+Source0:        https://tarballs.openstack.org/tripleo-validations/tripleo-validations-%{version}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  git
