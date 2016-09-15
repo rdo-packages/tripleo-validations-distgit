@@ -8,7 +8,7 @@ Version:        XXX
 Release:        XXX
 License:        ASL 2.0
 URL:            http://tripleo.org
-Source0:        https://tarballs.openstack.org/tripleo-validations/tripleo-validations-%{version}.tar.gz
+Source0:        https://tarballs.openstack.org/tripleo-validations/tripleo-validations-%{upstream_version}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  git
@@ -39,6 +39,10 @@ BuildRequires:  ansible >= 2
 Requires:       python-coverage
 Requires:       python-subunit
 Requires:       python-oslotest
+Requires:       python-oslo-config >= 2:3.14.0
+Requires:       python-heatclient >= 1.4.0
+Requires:       python-keystoneclient >= 1:2.0.0
+Requires:       python-novaclient >= 2.29.0
 Requires:       python-testrepository
 Requires:       python-testscenarios
 Requires:       python-testtools
