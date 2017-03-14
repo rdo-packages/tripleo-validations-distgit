@@ -43,7 +43,7 @@ Requires:       python-oslo-config >= 2:3.14.0
 Requires:       python-heatclient >= 1.6.1
 Requires:       python-keystoneauth1 >= 2.18.0
 Requires:       python-mistralclient >= 2.0.0
-Requires:       python-novaclient >= 7.1.0
+Requires:       python-novaclient >= 1:7.1.0
 Requires:       python-testrepository
 Requires:       python-testscenarios
 Requires:       python-testtools
