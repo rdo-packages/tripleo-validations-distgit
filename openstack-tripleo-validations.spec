@@ -28,6 +28,7 @@ Summary:        Tests for TripleO validations
 Requires:       %{name} = %{version}-%{release}
 
 BuildRequires:  python-coverage
+BuildRequires:  python-heatclient
 BuildRequires:  python-subunit
 BuildRequires:  python-oslotest
 BuildRequires:  python-testrepository
