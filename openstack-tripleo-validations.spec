@@ -106,3 +106,4 @@ rm -rf {test-,}requirements.txt
 %endif
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/tripleo-validations/commit/?id=74346193fcc724be87d6d91f8d146b823269ca7d
