@@ -59,7 +59,7 @@ This package contains the tripleo-validations test files.
 Summary:          Documentation for OpenStack Tripleo Validations
 
 BuildRequires:    python-sphinx
-BuildRequires:    python-oslo-sphinx
+BuildRequires:    python-openstackdocstheme
 
 %description      doc
 This package contains the tripleo-validations Documentation files.
@@ -77,7 +77,7 @@ rm -rf {test-,}requirements.txt
 
 # docs generation
 %if 0%{?with_doc}
-%{__python2} setup.py build_sphinx
+%{__python2} setup.py build_sphinx -b html
 %endif
 
 %install
