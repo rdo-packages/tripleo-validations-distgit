@@ -35,6 +35,7 @@ BuildRequires:  python-testrepository
 BuildRequires:  python-testscenarios
 BuildRequires:  python-testtools
 BuildRequires:  python-netaddr
+BuildRequires:  os-net-config >= 7.1.0
 BuildRequires:  ansible >= 2
 
 Requires:       python-coverage
@@ -49,6 +50,7 @@ Requires:       python-testrepository
 Requires:       python-testscenarios
 Requires:       python-testtools
 Requires:       python-netaddr
+Requires:       os-net-config >= 7.1.0
 Requires:       ansible >= 2
 
 %description -n openstack-tripleo-validations-tests
