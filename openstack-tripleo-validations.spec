@@ -27,7 +27,6 @@ TripleO deployments.
 Summary:        Tests for TripleO validations
 Requires:       %{name} = %{version}-%{release}
 
-BuildRequires:  python-coverage
 BuildRequires:  python-heatclient
 BuildRequires:  python-subunit
 BuildRequires:  python-oslotest
@@ -37,7 +36,6 @@ BuildRequires:  python-testtools
 BuildRequires:  python-netaddr
 BuildRequires:  ansible >= 2
 
-Requires:       python-coverage
 Requires:       python-subunit
 Requires:       python-oslotest
 Requires:       python-oslo-config >= 2:3.14.0
