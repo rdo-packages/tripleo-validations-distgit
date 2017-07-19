@@ -35,6 +35,7 @@ BuildRequires:  python-testrepository
 BuildRequires:  python-testscenarios
 BuildRequires:  python-testtools
 BuildRequires:  python-netaddr
+BuildRequires:  os-net-config
 BuildRequires:  ansible >= 2
 
 Requires:       python-coverage
@@ -49,6 +50,9 @@ Requires:       python-testrepository
 Requires:       python-testscenarios
 Requires:       python-testtools
 Requires:       python-netaddr
+# XXX: os-net-config should min-capped with 7.1.0
+# 7.1.0 is built in trunk but with an incorrect NVR
+Requires:       os-net-config
 Requires:       ansible >= 2
 
 %description -n openstack-tripleo-validations-tests
