@@ -17,7 +17,6 @@ BuildRequires:  python2-devel
 BuildRequires:  python-pbr
 Requires:       ansible >= 2
 Requires:       python-pbr
-Requires:       python-setuptools
 
 %description
 A collection of Ansible playbooks to detect and report potential issues during
