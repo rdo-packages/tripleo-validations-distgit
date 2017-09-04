@@ -4,7 +4,7 @@
 
 Name:           openstack-tripleo-validations
 Summary:        Ansible playbooks to detect potential issues with TripleO deployments
-Version:        5.6.0
+Version:        5.6.1
 Release:        1%{?dist}
 License:        ASL 2.0
 URL:            http://tripleo.org
@@ -104,6 +104,9 @@ rm -rf {test-,}requirements.txt
 %endif
 
 %changelog
+* Mon Sep 04 2017 rdo-trunk <javier.pena@redhat.com> 5.6.1-1
+- Update to 5.6.1
+
 * Fri Jul 14 2017 Alfredo Moralejo <amoralej@redhat.com> 5.6.0-1
 - Update to 5.6.0
 
