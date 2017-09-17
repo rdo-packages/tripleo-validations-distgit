@@ -35,6 +35,7 @@ BuildRequires:  python-testtools
 BuildRequires:  python-netaddr
 BuildRequires:  os-net-config
 BuildRequires:  ansible >= 2
+BuildRequires:  openstack-macros
 
 Requires:       python-subunit
 Requires:       python-oslotest
@@ -69,7 +70,7 @@ This package contains the tripleo-validations Documentation files.
 
 # Remove the requirements file so that pbr hooks don't add it
 # to distutils requires_dist config
-rm -rf {test-,}requirements.txt
+%py_req_cleanup
 
 %build
 %{__python2} setup.py build
