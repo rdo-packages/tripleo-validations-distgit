@@ -12,11 +12,11 @@ Source0:        https://tarballs.openstack.org/tripleo-validations/tripleo-valid
 
 BuildArch:      noarch
 BuildRequires:  git
-BuildRequires:  python-setuptools
+BuildRequires:  python2-setuptools
 BuildRequires:  python2-devel
-BuildRequires:  python-pbr
+BuildRequires:  python2-pbr
 Requires:       ansible >= 2
-Requires:       python-pbr
+Requires:       python2-pbr
 
 %description
 A collection of Ansible playbooks to detect and report potential issues during
@@ -26,28 +26,31 @@ TripleO deployments.
 Summary:        Tests for TripleO validations
 Requires:       %{name} = %{version}-%{release}
 
-BuildRequires:  python-heatclient
-BuildRequires:  python-subunit
-BuildRequires:  python-oslotest
-BuildRequires:  python-testrepository
-BuildRequires:  python-testscenarios
-BuildRequires:  python-testtools
-BuildRequires:  python-netaddr
+BuildRequires:  python2-heatclient
+BuildRequires:  python2-subunit
+BuildRequires:  python2-oslotest
+BuildRequires:  python2-testrepository
+BuildRequires:  python2-testscenarios
+BuildRequires:  python2-testtools
+BuildRequires:  python2-netaddr
 BuildRequires:  os-net-config
 BuildRequires:  ansible >= 2
 BuildRequires:  openstack-macros
 
-Requires:       python-subunit
-Requires:       python-oslotest
-Requires:       python-oslo-config >= 2:4.0.0
-Requires:       python-heatclient >= 1.6.1
-Requires:       python-keystoneauth1 >= 3.1.0
-Requires:       python-mistralclient >= 2.0.0
-Requires:       python-novaclient >= 1:7.1.0
-Requires:       python-testrepository
-Requires:       python-testscenarios
-Requires:       python-testtools
-Requires:       python-netaddr
+Requires:       python2-subunit
+Requires:       python2-oslotest
+Requires:       python2-oslo-config >= 2:5.1.0
+Requires:       python2-heatclient >= 1.10.0
+Requires:       python2-keystoneauth1 >= 3.3.0
+Requires:       python2-mistralclient >= 2.0.0
+Requires:       python2-novaclient >= 1:9.1.0
+Requires:       python2-ironicclient >= 2.2.0
+Requires:       python2-six >= 1.10.0
+Requires:       openstack-tripleo-common >= 7.1.0
+Requires:       python2-testrepository
+Requires:       python2-testscenarios
+Requires:       python2-testtools
+Requires:       python2-netaddr
 Requires:       os-net-config >= 7.1.0
 Requires:       ansible >= 2
 
@@ -58,8 +61,8 @@ This package contains the tripleo-validations test files.
 %package doc
 Summary:          Documentation for OpenStack Tripleo Validations
 
-BuildRequires:    python-sphinx
-BuildRequires:    python-openstackdocstheme
+BuildRequires:    python2-sphinx
+BuildRequires:    python2-openstackdocstheme
 
 %description      doc
 This package contains the tripleo-validations Documentation files.
