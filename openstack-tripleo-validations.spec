@@ -4,7 +4,7 @@
 
 Name:           openstack-tripleo-validations
 Summary:        Ansible playbooks to detect potential issues with TripleO deployments
-Version:        8.3.0
+Version:        8.4.0
 Release:        1%{?dist}
 License:        ASL 2.0
 URL:            http://tripleo.org
@@ -109,6 +109,9 @@ This package contains the tripleo-validations Documentation files.
 %endif
 
 %changelog
+* Tue Mar 27 2018 Jon Schlueter <jschluet@redhat.com> 8.4.0-1
+- Update to 8.4.0
+
 * Thu Mar 08 2018 RDO <dev@lists.rdoproject.org> 8.3.0-1
 - Update to 8.3.0
 
