@@ -27,6 +27,8 @@ Summary:        Tests for TripleO validations
 Requires:       %{name} = %{version}-%{release}
 
 BuildRequires:  python2-heatclient
+BuildRequires:  python2-swiftclient
+BuildRequires:  python2-novaclient
 BuildRequires:  python2-subunit
 BuildRequires:  python2-oslotest
 BuildRequires:  python2-testrepository
