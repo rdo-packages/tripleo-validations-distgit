@@ -44,7 +44,7 @@ Requires:       python2-oslotest
 Requires:       python2-oslo-config >= 2:5.1.0
 Requires:       python2-heatclient >= 1.10.0
 Requires:       python2-keystoneauth1 >= 3.3.0
-Requires:       python2-mistralclient >= 2.0.0
+Requires:       python2-mistralclient >= 3.1.0
 Requires:       python2-novaclient >= 1:9.1.0
 Requires:       python2-ironicclient >= 2.2.0
 Requires:       python2-six >= 1.10.0
