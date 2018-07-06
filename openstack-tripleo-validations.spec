@@ -15,8 +15,14 @@ BuildRequires:  git
 BuildRequires:  python2-setuptools
 BuildRequires:  python2-devel
 BuildRequires:  python2-pbr
+BuildRequires:  python-heatclient >= 1.10.0
+BuildRequires:  python-glanceclient >= 2.9.1
+BuildRequires:  python-ironicclient >= 2.3.0
 Requires:       ansible >= 2
 Requires:       python2-pbr
+Requires:       python-heatclient >= 1.10.0
+Requires:       python-glanceclient >= 2.9.1
+Requires:       python-ironicclient >= 2.3.0
 
 %description
 A collection of Ansible playbooks to detect and report potential issues during
