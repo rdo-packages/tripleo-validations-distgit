@@ -17,6 +17,7 @@ BuildRequires:  python2-devel
 BuildRequires:  python2-pbr
 Requires:       ansible >= 2
 Requires:       python2-pbr
+Requires:       python-glanceclient >= 2.9.1
 
 %description
 A collection of Ansible playbooks to detect and report potential issues during
