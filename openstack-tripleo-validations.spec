@@ -1,3 +1,16 @@
+# Macros for py2/py3 compatibility
+%if 0%{?fedora} || 0%{?rhel} > 7
+%global pydefault 3
+%else
+%global pydefault 2
+%endif
+
+%global pydefault_bin python%{pydefault}
+%global pydefault_sitelib %python%{pydefault}_sitelib
+%global pydefault_install %py%{pydefault}_install
+%global pydefault_build %py%{pydefault}_build
+# End of macros for py2/py3 compatibility
+
 %{!?upstream_version: %global upstream_version %{version}}
 %global upstream_name tripleo-validations
 %global with_doc %{!?_without_doc:1}%{?_without_doc:0}
@@ -12,18 +25,18 @@ Source0:        https://tarballs.openstack.org/tripleo-validations/tripleo-valid
 
 BuildArch:      noarch
 BuildRequires:  git
-BuildRequires:  python2-setuptools
-BuildRequires:  python2-devel
-BuildRequires:  python2-pbr
-BuildRequires:  python-heatclient >= 1.10.0
-BuildRequires:  python-glanceclient >= 2.9.1
-BuildRequires:  python-ironicclient >= 2.3.0
+BuildRequires:  python%{pydefault}-setuptools
+BuildRequires:  python%{pydefault}-devel
+BuildRequires:  python%{pydefault}-pbr
+BuildRequires:  python%{pydefault}-heatclient >= 1.10.0
+BuildRequires:  python%{pydefault}-glanceclient >= 2.9.1
+BuildRequires:  python%{pydefault}-ironicclient >= 2.3.0
 Requires:       ansible >= 2
-Requires:       python2-pbr
-Requires:       python-heatclient >= 1.10.0
-Requires:       python-glanceclient >= 2.9.1
-Requires:       python-ironicclient >= 2.3.0
-Requires:       python2-shade >= 1.24.0
+Requires:       python%{pydefault}-pbr
+Requires:       python%{pydefault}-heatclient >= 1.10.0
+Requires:       python%{pydefault}-glanceclient >= 2.9.1
+Requires:       python%{pydefault}-ironicclient >= 2.3.0
+Requires:       python%{pydefault}-shade >= 1.24.0
 
 %description
 A collection of Ansible playbooks to detect and report potential issues during
@@ -33,36 +46,36 @@ TripleO deployments.
 Summary:        Tests for TripleO validations
 Requires:       %{name} = %{version}-%{release}
 
-BuildRequires:  python2-heatclient
-BuildRequires:  python2-swiftclient
-BuildRequires:  python2-novaclient
-BuildRequires:  python2-subunit
-BuildRequires:  python2-oslotest
-BuildRequires:  python2-testrepository
-BuildRequires:  python2-testscenarios
-BuildRequires:  python2-testtools
-BuildRequires:  python2-netaddr
+BuildRequires:  python%{pydefault}-heatclient
+BuildRequires:  python%{pydefault}-swiftclient
+BuildRequires:  python%{pydefault}-novaclient
+BuildRequires:  python%{pydefault}-subunit
+BuildRequires:  python%{pydefault}-oslotest
+BuildRequires:  python%{pydefault}-testrepository
+BuildRequires:  python%{pydefault}-testscenarios
+BuildRequires:  python%{pydefault}-testtools
+BuildRequires:  python%{pydefault}-netaddr
 BuildRequires:  os-net-config
 BuildRequires:  ansible >= 2
 BuildRequires:  openstack-macros
 
-Requires:       python2-subunit
-Requires:       python2-oslotest
-Requires:       python2-oslo-config >= 2:5.1.0
-Requires:       python2-heatclient >= 1.10.0
-Requires:       python2-keystoneauth1 >= 3.3.0
-Requires:       python2-mistralclient >= 3.1.0
-Requires:       python2-novaclient >= 1:9.1.0
-Requires:       python2-ironicclient >= 2.2.0
-Requires:       python2-six >= 1.10.0
+Requires:       python%{pydefault}-subunit
+Requires:       python%{pydefault}-oslotest
+Requires:       python%{pydefault}-oslo-config >= 2:5.1.0
+Requires:       python%{pydefault}-heatclient >= 1.10.0
+Requires:       python%{pydefault}-keystoneauth1 >= 3.3.0
+Requires:       python%{pydefault}-mistralclient >= 3.1.0
+Requires:       python%{pydefault}-novaclient >= 1:9.1.0
+Requires:       python%{pydefault}-ironicclient >= 2.2.0
+Requires:       python%{pydefault}-six >= 1.10.0
 Requires:       openstack-tripleo-common >= 7.1.0
-Requires:       python2-testrepository
-Requires:       python2-testscenarios
-Requires:       python2-testtools
-Requires:       python2-netaddr
+Requires:       python%{pydefault}-testrepository
+Requires:       python%{pydefault}-testscenarios
+Requires:       python%{pydefault}-testtools
+Requires:       python%{pydefault}-netaddr
 Requires:       os-net-config >= 7.1.0
 Requires:       ansible >= 2
-Requires:       python2-shade >= 1.24.0
+Requires:       python%{pydefault}-shade >= 1.24.0
 
 %description -n openstack-tripleo-validations-tests
 This package contains the tripleo-validations test files.
@@ -71,8 +84,8 @@ This package contains the tripleo-validations test files.
 %package doc
 Summary:          Documentation for OpenStack Tripleo Validations
 
-BuildRequires:    python2-sphinx
-BuildRequires:    python2-openstackdocstheme
+BuildRequires:    python%{pydefault}-sphinx
+BuildRequires:    python%{pydefault}-openstackdocstheme
 
 %description      doc
 This package contains the tripleo-validations Documentation files.
@@ -86,31 +99,31 @@ This package contains the tripleo-validations Documentation files.
 %py_req_cleanup
 
 %build
-%{__python2} setup.py build
+%{pydefault_build}
 
 # docs generation
 %if 0%{?with_doc}
-%{__python2} setup.py build_sphinx -b html
+%{pydefault_bin} setup.py build_sphinx -b html
 %endif
 
 %install
-%{__python2} setup.py install -O1 --skip-build --root=%{buildroot}
+%{pydefault_install}
 
 %check
-%{__python2} setup.py testr
+%{pydefault_bin} setup.py testr
 
 %files
 %license LICENSE
 %doc README.rst AUTHORS ChangeLog
-%{python2_sitelib}/tripleo_validations
-%{python2_sitelib}/tripleo_validations-*.egg-info
+%{pydefault_sitelib}/tripleo_validations
+%{pydefault_sitelib}/tripleo_validations-*.egg-info
 %{_datadir}/%{name}
 %{_bindir}/tripleo-ansible-inventory
-%exclude %{python2_sitelib}/tripleo_validations/test*
+%exclude %{pydefault_sitelib}/tripleo_validations/test*
 
 %files -n openstack-tripleo-validations-tests
 %license LICENSE
-%{python2_sitelib}/tripleo_validations/tests
+%{pydefault_sitelib}/tripleo_validations/tests
 
 %if 0%{?with_doc}
 %files doc
