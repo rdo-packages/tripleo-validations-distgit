@@ -41,6 +41,7 @@ Requires:       python%{pydefault}-heatclient >= 1.10.0
 Requires:       python%{pydefault}-glanceclient >= 2.9.1
 Requires:       python%{pydefault}-ironicclient >= 2.3.0
 Requires:       python%{pydefault}-shade >= 1.24.0
+Requires:       os-net-config >= 7.1.0
 
 %description
 A collection of Ansible playbooks to detect and report potential issues during
