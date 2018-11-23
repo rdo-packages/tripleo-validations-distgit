@@ -141,3 +141,4 @@ This package contains the tripleo-validations Documentation files.
 %endif
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/tripleo-validations/commit/?id=ef60d4b4759b4ba23456c736157c514954b23604
