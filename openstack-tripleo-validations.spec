@@ -35,6 +35,7 @@ BuildRequires:  python%{pyver}-ironicclient >= 2.3.0
 Requires:       ansible >= 2
 %else
 Requires:       ansible-python%{pyver} >= 2
+BuildRequires:  /usr/bin/pathfix.py
 %endif
 Requires:       python%{pyver}-pbr
 Requires:       python%{pyver}-heatclient >= 1.10.0
@@ -117,6 +118,11 @@ This package contains the tripleo-validations Documentation files.
 
 %install
 %{pyver_install}
+
+%if %{pyver} == 3
+# Fix shebangs for Python 3-only distros
+pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/%{name}/validations/
+%endif
 
 #%check
 #PYTHON=%{pyver_bin} %{pyver_bin} setup.py testr
