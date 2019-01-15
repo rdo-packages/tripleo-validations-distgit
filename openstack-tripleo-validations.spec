@@ -84,8 +84,13 @@ Requires:       python%{pyver}-testscenarios
 Requires:       python%{pyver}-testtools
 Requires:       python%{pyver}-netaddr
 Requires:       os-net-config >= 7.1.0
-Requires:       ansible >= 2
 Requires:       python%{pyver}-shade >= 1.24.0
+
+%if %{pyver} == 2
+Requires:       ansible >= 2
+%else
+Requires:       ansible-python%{pyver} >= 2
+%endif
 
 %description -n openstack-tripleo-validations-tests
 This package contains the tripleo-validations test files.
