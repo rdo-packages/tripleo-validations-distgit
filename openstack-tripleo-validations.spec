@@ -43,6 +43,7 @@ Requires:       python%{pyver}-glanceclient >= 2.9.1
 Requires:       python%{pyver}-ironicclient >= 2.3.0
 Requires:       python%{pyver}-shade >= 1.24.0
 Requires:       os-net-config >= 7.1.0
+Requires:       python%{pyver}-ironic-inspector-client >= 3.1.1
 
 %description
 A collection of Ansible playbooks to detect and report potential issues during
@@ -85,6 +86,7 @@ Requires:       python%{pyver}-testtools
 Requires:       python%{pyver}-netaddr
 Requires:       os-net-config >= 7.1.0
 Requires:       python%{pyver}-shade >= 1.24.0
+Requires:       python%{pyver}-ironic-inspector-client >= 3.1.1
 
 %if %{pyver} == 2
 Requires:       ansible >= 2
