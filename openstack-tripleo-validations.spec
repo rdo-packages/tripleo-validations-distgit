@@ -34,7 +34,7 @@ BuildRequires:  python%{pyver}-ironicclient >= 2.3.0
 %if %{pyver} == 2
 Requires:       ansible >= 2
 %else
-Requires:       ansible-python%{pyver} >= 2
+Requires:       python3dist(ansible) >= 2
 BuildRequires:  /usr/bin/pathfix.py
 %endif
 Requires:       python%{pyver}-pbr
@@ -65,7 +65,7 @@ BuildRequires:  os-net-config
 %if %{pyver} == 2
 BuildRequires:  ansible >= 2
 %else
-BuildRequires:  ansible-python%{pyver} >= 2
+BuildRequires:  python3dist(ansible) >= 2
 %endif
 BuildRequires:  openstack-macros
 
@@ -89,7 +89,7 @@ Requires:       python%{pyver}-shade >= 1.24.0
 %if %{pyver} == 2
 Requires:       ansible >= 2
 %else
-Requires:       ansible-python%{pyver} >= 2
+Requires:       python3dist(ansible) >= 2
 %endif
 
 %description -n openstack-tripleo-validations-tests
