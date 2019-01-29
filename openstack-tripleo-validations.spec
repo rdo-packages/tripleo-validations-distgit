@@ -34,7 +34,7 @@ BuildRequires:  python%{pyver}-ironicclient >= 2.3.0
 %if %{pyver} == 2
 Requires:       ansible >= 2
 %else
-Requires:       ansible-python%{pyver} >= 2
+Requires:       python3dist(ansible) >= 2
 BuildRequires:  /usr/bin/pathfix.py
 %endif
 Requires:       python%{pyver}-pbr
