@@ -54,14 +54,14 @@ Summary:        Tests for TripleO validations
 Requires:       %{name} = %{version}-%{release}
 
 BuildRequires:  python%{pyver}-heatclient
-BuildRequires:  python%{pyver}-swiftclient
+BuildRequires:  python%{pyver}-netaddr
 BuildRequires:  python%{pyver}-novaclient
-BuildRequires:  python%{pyver}-subunit
 BuildRequires:  python%{pyver}-oslotest
+BuildRequires:  python%{pyver}-subunit
+BuildRequires:  python%{pyver}-swiftclient
 BuildRequires:  python%{pyver}-testrepository
 BuildRequires:  python%{pyver}-testscenarios
 BuildRequires:  python%{pyver}-testtools
-BuildRequires:  python%{pyver}-netaddr
 BuildRequires:  os-net-config
 %if %{pyver} == 2
 BuildRequires:  ansible >= 2
