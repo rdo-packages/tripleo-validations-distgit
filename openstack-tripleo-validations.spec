@@ -145,7 +145,7 @@ pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/%{name
 %{pyver_sitelib}/tripleo_validations-*.egg-info
 %{_datadir}/%{name}
 %{_bindir}/tripleo-ansible-inventory
-%exclude %{_bindir}/run-validations.sh
+%{_bindir}/run-validations.sh
 %exclude %{pyver_sitelib}/tripleo_validations/test*
 
 %files -n openstack-tripleo-validations-tests
