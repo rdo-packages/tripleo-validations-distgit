@@ -159,3 +159,4 @@ pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/%{name
 %endif
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/tripleo-validations/commit/?id=42b2a2068cb4c2c0369a47b5c7fc3d376e97c7ef
