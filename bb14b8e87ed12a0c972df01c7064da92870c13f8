@@ -1,0 +1,9 @@
+Code-Review+2: Yatin Karel <ykarel@redhat.com>
+Code-Review+2: Emilien Macchi <emilien@redhat.com>
+Workflow+1: Yatin Karel <ykarel@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Tue, 09 Jul 2019 04:04:06 +0000
+Reviewed-on: https://review.rdoproject.org/r/21393
+Project: openstack/tripleo-validations-distgit
+Branch: refs/heads/rpm-master
