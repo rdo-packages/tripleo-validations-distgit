@@ -73,6 +73,7 @@ BuildRequires:  openstack-macros
 Requires:       python%{pyver}-subunit
 Requires:       python%{pyver}-oslotest
 Requires:       python%{pyver}-oslo-config >= 2:5.2.0
+Requires:       python%{pyver}-oslo-utils >= 3.36.0
 Requires:       python%{pyver}-heatclient >= 1.10.0
 Requires:       python%{pyver}-keystoneauth1 >= 3.4.0
 Requires:       python%{pyver}-mistralclient >= 3.1.0
