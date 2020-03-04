@@ -135,8 +135,8 @@ pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/%{name
 pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/%{name}/roles/
 %endif
 
-#%check
-#PYTHON=%{pyver_bin} %{pyver_bin} setup.py testr
+%check
+PYTHON=%{pyver_bin} %{pyver_bin} setup.py testr
 
 %files
 %license LICENSE
