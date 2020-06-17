@@ -68,6 +68,7 @@ Requires:       python3-netaddr
 Requires:       os-net-config >= 7.1.0
 Requires:       python3-shade >= 1.24.0
 Requires:       python3-ironic-inspector-client >= 3.1.1
+Requires:       python3-validations-common
 
 Requires:       python3dist(ansible) >= 2
 
@@ -121,6 +122,7 @@ PYTHON=%{__python3} %{__python3} setup.py testr
 %{python3_sitelib}/tripleo_validations-*.egg-info
 %{_datadir}/%{name}
 %{_bindir}/tripleo-ansible-inventory
+%{_bindir}/tripleo-validation
 %{_bindir}/run-validations.sh
 %exclude %{python3_sitelib}/tripleo_validations/test*
 
