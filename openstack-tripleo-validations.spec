@@ -106,14 +106,6 @@ rm -fr doc/build/html/.{doctrees,buildinfo}
 %install
 %{py3_install}
 
-# TODO remove this when https://review.opendev.org/#/c/740261/ merges
-if [ ! -f "%{buildroot}%{_bindir}/tripleo-validation.py" ]; then
-cat <<EOF >%{buildroot}%{_bindir}/tripleo-validation.py
-#!/usr/bin/env python3
-EOF
-chmod 755 %{buildroot}%{_bindir}/tripleo-validation.py
-fi
-
 # Fix shebangs for Python 3-only distros
 # TODO remove this when shebangs workaround will be fixed
 if [ ! -d "%{buildroot}%{_datadir}/ansible" ]; then
