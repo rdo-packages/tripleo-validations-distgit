@@ -105,9 +105,6 @@ rm -fr doc/build/html/.{doctrees,buildinfo}
 %install
 %{py3_install}
 
-# TODO remove this when https://review.opendev.org/#/c/740261/ merges
-touch %{buildroot}%{_bindir}/tripleo-validation.py
-
 # Fix shebangs for Python 3-only distros
 pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/%{name}/library/
 pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/%{name}/lookup_plugins/
