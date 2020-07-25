@@ -127,6 +127,16 @@ This package contains the tripleo-validations Documentation files.
 %install
 %{pyver_install}
 
+# TODO remove this when https://review.opendev.org/#/c/740261/ merges
+if [ ! -f "%{buildroot}%{_bindir}/tripleo-validation.py" ]; then
+cat <<EOF >%{buildroot}%{_bindir}/tripleo-validation.py
+#!/usr/bin/env python3
+EOF
+chmod 755 %{buildroot}%{_bindir}/tripleo-validation.py
+fi
+
+# Fix shebangs for Python 3-only distros
+# TODO remove this when shebangs workaround will be fixed
 if [ ! -d "%{buildroot}%{_datadir}/ansible" ]; then
 mkdir -p %{buildroot}%{_datadir}/ansible/library
 mkdir -p %{buildroot}%{_datadir}/ansible/lookup_plugins
@@ -168,7 +178,8 @@ PYTHON=%{pyver_bin} %{pyver_bin} setup.py testr
 %{_datadir}/ansible
 %{_bindir}/tripleo-ansible-inventory
 %{_bindir}/run-validations.sh
-%exclude %{pyver_sitelib}/tripleo_validations/test*
+%{_bindir}/tripleo-validation.py
+%exclude %{python3_sitelib}/tripleo_validations/test*
 
 %files -n openstack-tripleo-validations-tests
 %license LICENSE
@@ -186,4 +197,3 @@ PYTHON=%{pyver_bin} %{pyver_bin} setup.py testr
 
 * Mon Oct 21 2019 RDO <dev@lists.rdoproject.org> 11.3.0-1
 - Update to 11.3.0
-
