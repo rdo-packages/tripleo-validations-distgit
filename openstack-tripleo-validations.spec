@@ -95,9 +95,6 @@ This package contains the tripleo-validations Documentation files.
 %build
 %{py3_build}
 
-# TODO remove this when https://review.opendev.org/#/c/740261/ merges
-touch ${buildroot}%{_bindir}/tripleo-validation.py
-
 # docs generation
 %if 0%{?with_doc}
 sphinx-build -W -b html doc/source doc/build/html
