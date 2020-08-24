@@ -115,10 +115,17 @@ chmod 755 %{buildroot}%{_bindir}/tripleo-validation.py
 fi
 
 # Fix shebangs for Python 3-only distros
-pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/%{name}/library/
-pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/%{name}/lookup_plugins/
-pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/%{name}/callback_plugins/
-pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/%{name}/roles/
+# TODO remove this when shebangs workaround will be fixed
+if [ ! -d "%{buildroot}%{_datadir}/ansible" ]; then
+mkdir -p %{buildroot}%{_datadir}/ansible/library
+mkdir -p %{buildroot}%{_datadir}/ansible/lookup_plugins
+mkdir -p %{buildroot}%{_datadir}/ansible/callback_plugins
+mkdir -p %{buildroot}%{_datadir}/ansible/roles
+fi
+pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansible/library/
+pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansible/lookup_plugins/
+pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansible/callback_plugins/
+pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansible/roles/
 
 %check
 PYTHON=%{__python3} %{__python3} setup.py testr
@@ -128,7 +135,7 @@ PYTHON=%{__python3} %{__python3} setup.py testr
 %doc README.rst AUTHORS ChangeLog
 %{python3_sitelib}/tripleo_validations
 %{python3_sitelib}/tripleo_validations-*.egg-info
-%{_datadir}/%{name}
+%{_datadir}/ansible
 %{_bindir}/tripleo-ansible-inventory
 %{_bindir}/run-validations.sh
 %{_bindir}/tripleo-validation.py
