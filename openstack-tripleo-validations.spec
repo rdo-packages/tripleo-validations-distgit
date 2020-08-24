@@ -127,7 +127,28 @@ This package contains the tripleo-validations Documentation files.
 %install
 %{pyver_install}
 
+if [ ! -d "%{buildroot}%{_datadir}/ansible" ]; then
+mkdir -p %{buildroot}%{_datadir}/ansible/library
+mkdir -p %{buildroot}%{_datadir}/ansible/lookup_plugins
+mkdir -p %{buildroot}%{_datadir}/ansible/callback_plugins
+mkdir -p %{buildroot}%{_datadir}/ansible/roles
+fi
+# TODO: to be removed
+# Make compatible with old path openstack-tripleo-validation
+if [ ! -d "%{buildroot}%{_datadir}" ]; then
+mkdir -p %{buildroot}%{_datadir}/%{name}/library
+mkdir -p %{buildroot}%{_datadir}/%{name}/lookup_plugins
+mkdir -p %{buildroot}%{_datadir}/%{name}/callback_plugins
+mkdir -p %{buildroot}%{_datadir}/%{name}/roles
+fi
+
 %if %{pyver} == 3
+# Fix shebangs for Python 3-only distros
+# TODO remove this when shebangs workaround will be fixed
+pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansible/library/
+pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansible/lookup_plugins/
+pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansible/callback_plugins/
+pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansible/roles/
 # Fix shebangs for Python 3-only distros
 pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/%{name}/library/
 pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/%{name}/lookup_plugins/
@@ -144,6 +165,7 @@ PYTHON=%{pyver_bin} %{pyver_bin} setup.py testr
 %{pyver_sitelib}/tripleo_validations
 %{pyver_sitelib}/tripleo_validations-*.egg-info
 %{_datadir}/%{name}
+%{_datadir}/ansible
 %{_bindir}/tripleo-ansible-inventory
 %{_bindir}/run-validations.sh
 %exclude %{pyver_sitelib}/tripleo_validations/test*
@@ -164,4 +186,3 @@ PYTHON=%{pyver_bin} %{pyver_bin} setup.py testr
 
 * Mon Oct 21 2019 RDO <dev@lists.rdoproject.org> 11.3.0-1
 - Update to 11.3.0
-
