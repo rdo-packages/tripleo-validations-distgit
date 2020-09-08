@@ -8,7 +8,7 @@ Summary:        Ansible playbooks to detect potential issues with TripleO deploy
 Version:        XXX
 Release:        XXX
 License:        ASL 2.0
-URL:            http://tripleo.org
+URL:            https://opendev.org/openstack/tripleo-validations
 Source0:        https://tarballs.openstack.org/tripleo-validations/tripleo-validations-%{upstream_version}.tar.gz
 
 BuildArch:      noarch
