@@ -186,3 +186,4 @@ PYTHON=%{pyver_bin} %{pyver_bin} setup.py testr
 
 * Mon Oct 21 2019 RDO <dev@lists.rdoproject.org> 11.3.0-1
 - Update to 11.3.0
+
