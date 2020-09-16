@@ -165,3 +165,4 @@ PYTHON=%{__python3} %{__python3} setup.py testr
 * Tue May 26 2020 RDO <dev@lists.rdoproject.org> 12.3.0-1
 - Update to 12.3.0
 
+
