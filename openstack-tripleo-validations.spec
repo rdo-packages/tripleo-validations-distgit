@@ -110,30 +110,10 @@ pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_bindir}/tripleo
 
 # Fix shebangs for Python 3-only distros
 # TODO remove this when shebangs workaround will be fixed
-if [ ! -d "%{buildroot}%{_datadir}/ansible" ]; then
-mkdir -p %{buildroot}%{_datadir}/ansible/library
-mkdir -p %{buildroot}%{_datadir}/ansible/lookup_plugins
-mkdir -p %{buildroot}%{_datadir}/ansible/callback_plugins
-mkdir -p %{buildroot}%{_datadir}/ansible/roles
-fi
 pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansible/library/
 pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansible/lookup_plugins/
 pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansible/callback_plugins/
 pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansible/roles/
-
-# TODO: to be removed
-# Make compatible with old path openstack-tripleo-validation
-if [ ! -d "%{buildroot}%{_datadir}/%{name}" ]; then
-mkdir -p %{buildroot}%{_datadir}/%{name}/library
-mkdir -p %{buildroot}%{_datadir}/%{name}/lookup_plugins
-mkdir -p %{buildroot}%{_datadir}/%{name}/callback_plugins
-mkdir -p %{buildroot}%{_datadir}/%{name}/roles
-fi
-# Fix shebangs for Python 3-only distros
-pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/%{name}/library/
-pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/%{name}/lookup_plugins/
-pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/%{name}/callback_plugins/
-pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/%{name}/roles/
 
 %check
 PYTHON=%{__python3} %{__python3} setup.py testr
@@ -145,7 +125,6 @@ PYTHON=%{__python3} %{__python3} setup.py testr
 %{python3_sitelib}/tripleo_validations-*.egg-info
 # TODO to be removed:
 # Make old path compatible
-%{_datadir}/%{name}
 %{_datadir}/ansible
 %{_bindir}/tripleo-ansible-inventory
 %{_bindir}/run-validations.sh
