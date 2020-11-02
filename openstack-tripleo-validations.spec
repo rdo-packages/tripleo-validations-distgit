@@ -7,8 +7,8 @@
 
 Name:           openstack-tripleo-validations
 Summary:        Ansible playbooks to detect potential issues with TripleO deployments
-Version:        XXX
-Release:        XXX
+Version:        13.0.0
+Release:        1%{?dist}
 License:        ASL 2.0
 URL:            https://opendev.org/openstack/tripleo-validations
 Source0:        https://tarballs.openstack.org/tripleo-validations/tripleo-validations-%{upstream_version}.tar.gz
@@ -156,4 +156,7 @@ PYTHON=%{__python3} %{__python3} setup.py testr
 %endif
 
 %changelog
+* Mon Nov 02 2020 RDO <dev@lists.rdoproject.org> 13.0.0-1
+- Update to 13.0.0
+
 
