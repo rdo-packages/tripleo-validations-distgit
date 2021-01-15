@@ -88,6 +88,7 @@ Requires:       python%{pyver}-netaddr
 Requires:       os-net-config >= 7.1.0
 Requires:       python%{pyver}-shade >= 1.24.0
 Requires:       python%{pyver}-ironic-inspector-client >= 3.1.1
+Requires:       validations-common
 
 %if %{pyver} == 2
 Requires:       ansible >= 2
