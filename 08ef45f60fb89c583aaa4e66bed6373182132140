@@ -1,0 +1,11 @@
+Code-Review+2: Gaël Chamoulaud <gchamoul@redhat.com>
+Code-Review+1: David J Peacock <david.j.peacock@gmail.com>
+Code-Review+1: Cédric Jeanneret <cjeanner+github@redhat.com>
+Code-Review+2: Javier Peña <jpena@redhat.com>
+Workflow+1: Javier Peña <jpena@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Mon, 18 Jan 2021 16:42:28 +0000
+Reviewed-on: https://review.rdoproject.org/r/31572
+Project: openstack/tripleo-validations-distgit
+Branch: refs/heads/train-rdo
