@@ -41,6 +41,7 @@ Requires:       python3-shade >= 1.24.0
 Requires:       os-net-config >= 7.1.0
 Requires:       python3-ironic-inspector-client >= 3.1.1
 Requires:       python3-lxml
+Requires:       validations-common
 
 %description
 A collection of Ansible playbooks to detect and report potential issues during
@@ -81,7 +82,6 @@ Requires:       python3-netaddr
 Requires:       os-net-config >= 7.1.0
 Requires:       python3-shade >= 1.24.0
 Requires:       python3-ironic-inspector-client >= 3.1.1
-Requires:       validations-common
 
 Requires:       python3dist(ansible) >= 2
 
