@@ -167,6 +167,11 @@ pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/%{name
 pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/%{name}/roles/
 %endif
 
+# Remove useless __init__.py file in library directory
+# TODO:(gchamoul) Remove this once https://review.opendev.org/c/openstack/tripleo-validations/+/771797
+# will be merged upstream.
+rm -fr %{buildroot}%{_datadir}/ansible/library/__init__.py
+
 %check
 PYTHON=%{pyver_bin} %{pyver_bin} setup.py testr
 
