@@ -132,6 +132,11 @@ pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansibl
 pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansible/callback_plugins/
 pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansible/roles/
 
+# Remove useless __init__.py file in library directory
+# TODO:(gchamoul) Remove this once https://review.opendev.org/c/openstack/tripleo-validations/+/771792
+# will be merged upstream.
+rm -fr %{buildroot}%{_datadir}/ansible/library/__init__.py
+
 %check
 PYTHON=%{__python3} %{__python3} setup.py testr
 
