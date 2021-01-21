@@ -113,6 +113,13 @@ This package contains the tripleo-validations Documentation files.
 %prep
 %autosetup -n %{upstream_name}-%{upstream_version} -S git
 
+# Create __init__.py file if doesn't exit
+%if %{pyver} == 2
+if [ ! -f library/__init__.py ]; then
+touch library/__init__.py
+fi
+%endif
+
 # Remove the requirements file so that pbr hooks don't add it
 # to distutils requires_dist config
 %py_req_cleanup
@@ -186,6 +193,7 @@ PYTHON=%{pyver_bin} %{pyver_bin} setup.py testr
 %{_bindir}/run-validations.sh
 %{_bindir}/tripleo-validation.py
 %exclude %{python3_sitelib}/tripleo_validations/test*
+%exclude %{_datadir}/ansible/library/__init__.py
 
 %files -n openstack-tripleo-validations-tests
 %license LICENSE
