@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "df0d75bb_05b629bd",
+        "filename": "openstack-tripleo-validations.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2021-03-16T10:43:22Z",
+      "side": 1,
+      "message": "Here, you just have to add one line and that\u0027s it:\n%exclude %{_datadir}/ansible/library/__init__.py",
+      "revId": "97191b376686087b9a4aff275d87d09d5d239281",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
