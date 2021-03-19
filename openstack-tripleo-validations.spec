@@ -143,8 +143,9 @@ PYTHON=%{__python3} %{__python3} setup.py testr
 %{python3_sitelib}/tripleo_validations-*.egg-info
 %{_datadir}/ansible
 %{_bindir}/tripleo-ansible-inventory
-%{_bindir}/run-validations.sh
 %{_bindir}/tripleo-validation.py
+# TODO(gchamoul): Remove run-validations.sh exclusion once upstream patch is merged!
+%exclude %{_bindir}/run-validations.sh
 %exclude %{python3_sitelib}/tripleo_validations/test*
 %exclude %{buildroot}%{_datadir}/ansible/library/__init__.py
 
