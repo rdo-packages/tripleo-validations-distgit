@@ -128,8 +128,6 @@ rm -fr doc/build/html/.{doctrees,buildinfo}
 %install
 %{py3_install}
 
-pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_bindir}/tripleo-validation.py
-
 # Fix shebangs for Python 3-only distros
 # TODO remove this when shebangs workaround will be fixed
 pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansible/library/
@@ -147,8 +145,10 @@ PYTHON=%{__python3} %{__python3} setup.py testr
 %{python3_sitelib}/tripleo_validations-*.egg-info
 %{_datadir}/ansible
 %{_bindir}/tripleo-ansible-inventory
-%{_bindir}/run-validations.sh
-%{_bindir}/tripleo-validation.py
+# TODO(gchamoul): Remove run-validations.sh and tripleo-validation.py exclusion
+# once upstream patches are merged!
+%exclude %{_bindir}/run-validations.sh
+%exclude %{_bindir}/tripleo-validation.py
 %exclude %{python3_sitelib}/tripleo_validations/test*
 %exclude %{buildroot}%{_datadir}/ansible/library/__init__.py
 
