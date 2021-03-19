@@ -149,7 +149,6 @@ PYTHON=%{__python3} %{__python3} setup.py testr
 %{python3_sitelib}/tripleo_validations-*.egg-info
 %{_datadir}/ansible
 %{_bindir}/tripleo-ansible-inventory
-%{_bindir}/run-validations.sh
 %{_bindir}/tripleo-validation.py
 %exclude %{python3_sitelib}/tripleo_validations/test*
 
