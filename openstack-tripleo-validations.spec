@@ -33,6 +33,7 @@ BuildRequires:  python3-glanceclient >= 2.9.1
 BuildRequires:  python3-ironicclient >= 2.3.0
 Requires:       python3dist(ansible) >= 2
 BuildRequires:  /usr/bin/pathfix.py
+BuildRequires:  python3-osc-lib >= 2.3.0
 Requires:       python3-pbr
 Requires:       python3-heatclient >= 1.10.0
 Requires:       python3-glanceclient >= 2.9.1
@@ -64,6 +65,7 @@ BuildRequires:  python3-testtools
 BuildRequires:  os-net-config
 BuildRequires:  python3dist(ansible) >= 2
 BuildRequires:  openstack-macros
+BuildRequires:  python3-osc-lib >= 2.3.0
 
 Requires:       python3-subunit
 Requires:       python3-oslotest
