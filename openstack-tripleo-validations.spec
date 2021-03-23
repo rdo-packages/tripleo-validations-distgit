@@ -66,6 +66,7 @@ BuildRequires:  os-net-config
 BuildRequires:  python3dist(ansible) >= 2
 BuildRequires:  openstack-macros
 BuildRequires:  python3-osc-lib >= 2.3.0
+BuildRequires:  python3-osc-lib-tests >= 2.3.0
 
 Requires:       python3-subunit
 Requires:       python3-oslotest
@@ -86,6 +87,7 @@ Requires:       os-net-config >= 7.1.0
 Requires:       python3-shade >= 1.24.0
 Requires:       python3-ironic-inspector-client >= 3.1.1
 Requires:       python3-osc-lib >= 2.3.0
+Requires:       python3-osc-lib-tests >= 2.3.0
 
 Requires:       python3dist(ansible) >= 2
 
