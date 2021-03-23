@@ -1,0 +1,9 @@
+Code-Review+2: Alex Schultz <aschultz@next-development.com>
+Code-Review+2: Gaël Chamoulaud <gchamoul@redhat.com>
+Workflow+1: Gaël Chamoulaud <gchamoul@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Tue, 23 Mar 2021 05:06:53 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/tripleo-validations-distgit/+/32639
+Project: openstack/tripleo-validations-distgit
+Branch: refs/heads/rpm-master
