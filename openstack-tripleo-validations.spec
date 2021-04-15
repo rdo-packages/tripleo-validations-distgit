@@ -44,6 +44,7 @@ Requires:       python3-ironic-inspector-client >= 3.1.1
 Requires:       python3-lxml
 Requires:       validations-common
 Requires:       python3-osc-lib >= 2.3.0
+Requires:       python3-setuptools
 
 %description
 A collection of Ansible playbooks to detect and report potential issues during
