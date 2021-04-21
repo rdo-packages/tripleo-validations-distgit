@@ -33,7 +33,6 @@ BuildRequires:  python3-glanceclient >= 2.9.1
 BuildRequires:  python3-ironicclient >= 2.3.0
 Requires:       python3dist(ansible) >= 2
 BuildRequires:  /usr/bin/pathfix.py
-BuildRequires:  python3-osc-lib >= 2.3.0
 Requires:       python3-pbr
 Requires:       python3-heatclient >= 1.10.0
 Requires:       python3-glanceclient >= 2.9.1
@@ -43,7 +42,6 @@ Requires:       os-net-config >= 7.1.0
 Requires:       python3-ironic-inspector-client >= 3.1.1
 Requires:       python3-lxml
 Requires:       validations-common
-Requires:       python3-osc-lib >= 2.3.0
 Requires:       python3-setuptools
 
 %description
@@ -66,8 +64,6 @@ BuildRequires:  python3-testtools
 BuildRequires:  os-net-config
 BuildRequires:  python3dist(ansible) >= 2
 BuildRequires:  openstack-macros
-BuildRequires:  python3-osc-lib >= 2.3.0
-BuildRequires:  python3-osc-lib-tests >= 2.3.0
 
 Requires:       python3-subunit
 Requires:       python3-oslotest
@@ -87,8 +83,6 @@ Requires:       python3-netaddr
 Requires:       os-net-config >= 7.1.0
 Requires:       python3-shade >= 1.24.0
 Requires:       python3-ironic-inspector-client >= 3.1.1
-Requires:       python3-osc-lib >= 2.3.0
-Requires:       python3-osc-lib-tests >= 2.3.0
 
 Requires:       python3dist(ansible) >= 2
 
