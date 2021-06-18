@@ -25,15 +25,16 @@ BuildArch:      noarch
 BuildRequires:  /usr/bin/gpgv2
 %endif
 BuildRequires:  git-core
-BuildRequires:  python3-setuptools
+BuildRequires:  python3-setuptools >= 50.3.0
 BuildRequires:  python3-devel
-BuildRequires:  python3-pbr
+BuildRequires:  python3-pbr >= 3.1.1
 BuildRequires:  python3-heatclient >= 1.10.0
 BuildRequires:  python3-glanceclient >= 2.9.1
 BuildRequires:  python3-ironicclient >= 2.3.0
-Requires:       python3dist(ansible) >= 2
 BuildRequires:  /usr/bin/pathfix.py
-Requires:       python3-pbr
+
+Requires:       python3dist(ansible) >= 2
+Requires:       python3-pbr >= 3.1.1
 Requires:       python3-heatclient >= 1.10.0
 Requires:       python3-glanceclient >= 2.9.1
 Requires:       python3-ironicclient >= 2.7.0
@@ -42,7 +43,7 @@ Requires:       os-net-config >= 7.1.0
 Requires:       python3-ironic-inspector-client >= 3.1.1
 Requires:       python3-lxml
 Requires:       validations-common
-Requires:       python3-setuptools
+Requires:       python3-setuptools >= 50.3.0
 
 %description
 A collection of Ansible playbooks to detect and report potential issues during
@@ -78,8 +79,8 @@ Requires:       python3-six >= 1.11.0
 Requires:       openstack-tripleo-common >= 7.1.0
 Requires:       python3-testrepository
 Requires:       python3-testscenarios
-Requires:       python3-testtools
-Requires:       python3-netaddr
+Requires:       python3-testtools >= 2.2.0
+Requires:       python3-netaddr >= 0.7.18
 Requires:       os-net-config >= 7.1.0
 Requires:       python3-shade >= 1.24.0
 Requires:       python3-ironic-inspector-client >= 3.1.1
@@ -93,9 +94,11 @@ This package contains the tripleo-validations test files.
 %package doc
 Summary:          Documentation for OpenStack Tripleo Validations
 
-BuildRequires:    python3-sphinx
-BuildRequires:    python3-openstackdocstheme
-BuildRequires:    python3-ruamel-yaml
+BuildRequires:    python3-sphinx >= 2.0.0
+BuildRequires:    python3-openstackdocstheme >= 2.2.2
+BuildRequires:    python3-ruamel-yaml >= 0.15.5
+
+BuildConflicts:	python3-sphinx = 2.1.0
 
 %description      doc
 This package contains the tripleo-validations Documentation files.
