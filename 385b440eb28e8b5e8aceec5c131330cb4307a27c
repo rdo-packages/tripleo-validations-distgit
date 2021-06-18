@@ -46,6 +46,30 @@
       "revId": "385b440eb28e8b5e8aceec5c131330cb4307a27c",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e5cd442f_c51987a1",
+        "filename": "openstack-tripleo-validations.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2021-06-18T11:35:44Z",
+      "side": 1,
+      "message": "To me it\u0027s a matter of grading:\n\n- Adding specific minimum versions for Requires is a good idea, and helps with upgrades. \n- Adding a minimum version for BuildRequires is redundant and doesn\u0027t help a lot, so it\u0027s usually not recommended (although it\u0027s accepted if the maintainer wishes so) in RDO\n- Adding BuildConflicts to avoid a specific version of a package, which we know is not in any repos [1], is not a good idea because it adds unnecessary complexity to the spec, thus I recommend against it.\n\n[1] https://cbs.centos.org/koji/packageinfo?packageID\u003d592",
+      "parentUuid": "2d71cd7b_3a9e803b",
+      "range": {
+        "startLine": 101,
+        "startChar": 0,
+        "endLine": 101,
+        "endChar": 3
+      },
+      "revId": "385b440eb28e8b5e8aceec5c131330cb4307a27c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
     }
   ]
 }
