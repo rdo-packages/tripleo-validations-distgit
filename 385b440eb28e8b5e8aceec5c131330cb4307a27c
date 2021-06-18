@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1f15da8a_3f3447f5",
+        "filename": "openstack-tripleo-validations.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2021-06-18T11:11:11Z",
+      "side": 1,
+      "message": "On the RDO side, we take care of keeping python3-sphinx in the right version, so this BuildConflicts is not needed. Let\u0027s keep the spec simple and remove it.",
+      "range": {
+        "startLine": 101,
+        "startChar": 0,
+        "endLine": 101,
+        "endChar": 3
+      },
+      "revId": "385b440eb28e8b5e8aceec5c131330cb4307a27c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
