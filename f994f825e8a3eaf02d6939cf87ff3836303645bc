@@ -1,0 +1,12 @@
+Code-Review+2: Yatin Karel <ykarel@redhat.com>
+Code-Review+1: mathieu bultel <mat.bultel@gmail.com>
+Code-Review+1: Jiří Podivín <jpodivin@gmail.com>
+Code-Review+2: Alex Schultz <aschultz@next-development.com>
+Code-Review+1: Cédric Jeanneret <cjeanner+github@redhat.com>
+Workflow+1: Yatin Karel <ykarel@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Mon, 02 Aug 2021 11:08:30 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/tripleo-validations-distgit/+/32615
+Project: openstack/tripleo-validations-distgit
+Branch: refs/heads/rpm-master
