@@ -116,6 +116,9 @@ This package contains the tripleo-validations Documentation files.
 # Create __init__.py file if doesn't exit
 %if %{pyver} == 2
 touch library/__init__.py
+
+# To handle mock for py2 build
+find ./tripleo_validations/tests/ -type f -exec sed -i -e 's/from unittest.mock/from mock/g' {} \;
 %endif
 
 # Remove the requirements file so that pbr hooks don't add it
