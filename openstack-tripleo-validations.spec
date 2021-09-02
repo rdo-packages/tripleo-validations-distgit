@@ -31,9 +31,9 @@ BuildRequires:  python3-pbr
 BuildRequires:  python3-heatclient >= 1.10.0
 BuildRequires:  python3-glanceclient >= 2.9.1
 BuildRequires:  python3-ironicclient >= 2.3.0
-Requires:       python3dist(ansible) >= 2
 BuildRequires:  /usr/bin/pathfix.py
-Requires:       python3-pbr
+Requires:       (python3dist(ansible) >= 2 or ansible-core >= 2.11)
+Requires:       python3-pbr >= 3.1.1
 Requires:       python3-heatclient >= 1.10.0
 Requires:       python3-glanceclient >= 2.9.1
 Requires:       python3-ironicclient >= 2.7.0
@@ -62,7 +62,7 @@ BuildRequires:  python3-testrepository
 BuildRequires:  python3-testscenarios
 BuildRequires:  python3-testtools
 BuildRequires:  os-net-config
-BuildRequires:  python3dist(ansible) >= 2
+BuildRequires:  (python3dist(ansible) >= 2 or ansible-core >= 2.11)
 BuildRequires:  openstack-macros
 
 Requires:       python3-subunit
@@ -84,7 +84,7 @@ Requires:       os-net-config >= 7.1.0
 Requires:       python3-shade >= 1.24.0
 Requires:       python3-ironic-inspector-client >= 3.1.1
 
-Requires:       python3dist(ansible) >= 2
+Requires:       (python3dist(ansible) >= 2 or ansible-core >= 2.11)
 
 %description -n openstack-tripleo-validations-tests
 This package contains the tripleo-validations test files.
