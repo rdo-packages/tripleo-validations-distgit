@@ -33,7 +33,16 @@ BuildRequires:  python3-glanceclient >= 2.9.1
 BuildRequires:  python3-ironicclient >= 2.3.0
 Requires:       python3dist(ansible) >= 2
 BuildRequires:  /usr/bin/pathfix.py
+<<<<<<< HEAD   (782a54 openstack-tripleo-validations-14.2.1-1)
 Requires:       python3-pbr
+=======
+
+Requires:       (python3dist(ansible) >= 2 or ansible-core >= 2.11)
+Requires:       ansible-collection-ansible-posix >= 1.2.0
+Requires:       ansible-collection-community-general >= 2.5.1
+Requires:       ansible-collection-containers-podman >= 1.4.1
+Requires:       python3-pbr >= 3.1.1
+>>>>>>> CHANGE (0385a1 Add Ansible Collections as deps for tripleo-validations (mas)
 Requires:       python3-heatclient >= 1.10.0
 Requires:       python3-glanceclient >= 2.9.1
 Requires:       python3-ironicclient >= 2.7.0
