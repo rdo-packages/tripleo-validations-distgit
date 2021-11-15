@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "41f6f0ae_51776af1",
+        "filename": "openstack-tripleo-validations.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-11-15T15:13:10Z",
+      "side": 1,
+      "message": "this coming from different rpm-master commit https://github.com/rdo-packages/tripleo-validations-distgit/commit/ae83045246b1725cbc365b60068f180c76cda314",
+      "range": {
+        "startLine": 36,
+        "startChar": 27,
+        "endLine": 36,
+        "endChar": 36
+      },
+      "revId": "f51948d7936b7e17c8c5d1a91c5db9f3ba1fe08e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
