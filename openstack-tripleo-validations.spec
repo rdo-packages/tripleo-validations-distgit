@@ -221,3 +221,4 @@ PYTHON=%{pyver_bin} %{pyver_bin} setup.py testr
 
 * Mon Oct 21 2019 RDO <dev@lists.rdoproject.org> 11.3.0-1
 - Update to 11.3.0
+# REMOVEME: error caused by commit https://opendev.org/openstack/tripleo-validations/commit/fef7cf7ce35f310ffd090d862bc105e20c64e481
