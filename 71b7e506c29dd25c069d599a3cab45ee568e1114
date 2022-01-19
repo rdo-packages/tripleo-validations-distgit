@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "d6ece6cf_adb9440e",
         "filename": "openstack-tripleo-validations.spec",
@@ -20,8 +21,31 @@
         "endChar": 1
       },
       "revId": "71b7e506c29dd25c069d599a3cab45ee568e1114",
-      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
-      "unresolved": true
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dda86795_a81060e8",
+        "filename": "openstack-tripleo-validations.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2022-01-19T11:12:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d6ece6cf_adb9440e",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 1
+      },
+      "revId": "71b7e506c29dd25c069d599a3cab45ee568e1114",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
