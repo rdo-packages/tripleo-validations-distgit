@@ -181,3 +181,4 @@ PYTHON=%{__python3} %{__python3} setup.py testr
 - Update to 13.0.0
 
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/tripleo-validations/commit/c5637779fcbbae337f9de74a42d9322c1b8e343e
