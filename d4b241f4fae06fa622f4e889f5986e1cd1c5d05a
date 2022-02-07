@@ -1,0 +1,8 @@
+Code-Review+2: mathieu bultel <mat.bultel@gmail.com>
+Workflow+1: mathieu bultel <mat.bultel@gmail.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Mon, 07 Feb 2022 14:49:14 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/tripleo-validations-distgit/+/39036
+Project: openstack/tripleo-validations-distgit
+Branch: refs/heads/wallaby-rdo
