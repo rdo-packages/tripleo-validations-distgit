@@ -81,6 +81,7 @@ Summary:          Documentation for OpenStack Tripleo Validations
 
 BuildRequires:    python3-sphinx
 BuildRequires:    python3-openstackdocstheme
+BuildRequires:    python3-ruamel-yaml
 
 %description      doc
 This package contains the tripleo-validations Documentation files.
