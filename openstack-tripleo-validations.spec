@@ -145,10 +145,13 @@ PYTHON=%{__python3} %{__python3} setup.py testr
 %{python3_sitelib}/tripleo_validations-*.egg-info
 %{_datadir}/ansible
 %{_bindir}/tripleo-ansible-inventory
+<<<<<<< HEAD   (d4b241 Remove deprecated scripts from build)
 # TODO(gchamoul): Remove run-validations.sh and tripleo-validation.py exclusion
 # once upstream patches are merged!
 %exclude %{_bindir}/run-validations.sh
 %exclude %{_bindir}/tripleo-validation.py
+=======
+>>>>>>> CHANGE (5d3e14 Remove the tripleo-ansible-inventory script)
 %exclude %{python3_sitelib}/tripleo_validations/test*
 %exclude %{buildroot}%{_datadir}/ansible/library/__init__.py
 
