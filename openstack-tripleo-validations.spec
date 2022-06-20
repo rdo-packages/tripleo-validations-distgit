@@ -107,8 +107,6 @@ rm -fr doc/build/html/.{doctrees,buildinfo}
 %install
 %{py3_install}
 
-pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_bindir}/tripleo-validation.py
-
 # Fix shebangs for Python 3-only distros
 # TODO remove this when shebangs workaround will be fixed
 if [ ! -d "%{buildroot}%{_datadir}/ansible" ]; then
@@ -154,7 +152,6 @@ PYTHON=%{__python3} %{__python3} setup.py testr
 %{_datadir}/%{name}
 %{_datadir}/ansible
 %{_bindir}/tripleo-ansible-inventory
-%{_bindir}/tripleo-validation.py
 %exclude %{python3_sitelib}/tripleo_validations/test*
 
 %files -n openstack-tripleo-validations-tests
