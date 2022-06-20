@@ -154,7 +154,6 @@ PYTHON=%{__python3} %{__python3} setup.py testr
 %{_datadir}/%{name}
 %{_datadir}/ansible
 %{_bindir}/tripleo-ansible-inventory
-%{_bindir}/tripleo-validation.py
 %exclude %{python3_sitelib}/tripleo_validations/test*
 
 %files -n openstack-tripleo-validations-tests
