@@ -16,6 +16,23 @@
       "message": "Waiting for https://review.opendev.org/c/openstack/tripleo-validations/+/847162\nto land.",
       "revId": "bdcd5a831cfcaa9454b98a053abd2890842afc94",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f57c67a5_4dc9c7c5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 278
+      },
+      "writtenOn": "2022-06-23T19:23:27Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "bdcd5a831cfcaa9454b98a053abd2890842afc94",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
