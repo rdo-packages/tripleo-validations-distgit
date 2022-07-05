@@ -152,6 +152,10 @@ PYTHON=%{__python3} %{__python3} setup.py testr
 %{_datadir}/%{name}
 %{_datadir}/ansible
 %{_bindir}/tripleo-ansible-inventory
+%if "%{version}" == "12.3.7"
+%{_bindir}/run-validations.sh
+%{_bindir}/tripleo-validation.py
+%endif
 %exclude %{python3_sitelib}/tripleo_validations/test*
 
 %files -n openstack-tripleo-validations-tests
