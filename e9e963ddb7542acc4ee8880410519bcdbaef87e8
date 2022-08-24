@@ -1,0 +1,9 @@
+Code-Review+2: Jiří Podivín <jpodivin@gmail.com>
+Code-Review+2: David J Peacock <david.j.peacock@gmail.com>
+Workflow+1: Jiří Podivín <jpodivin@gmail.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Wed, 24 Aug 2022 07:17:34 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/tripleo-validations-distgit/+/43675
+Project: openstack/tripleo-validations-distgit
+Branch: refs/heads/wallaby-rdo
