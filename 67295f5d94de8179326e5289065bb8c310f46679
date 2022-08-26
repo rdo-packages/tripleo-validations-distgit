@@ -1,0 +1,9 @@
+Code-Review+2: mathieu bultel <mat.bultel@gmail.com>
+Code-Review+2: David J Peacock <david.j.peacock@gmail.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Workflow+1: mathieu bultel <mat.bultel@gmail.com>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Fri, 26 Aug 2022 11:38:13 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/tripleo-validations-distgit/+/44168
+Project: openstack/tripleo-validations-distgit
+Branch: refs/heads/wallaby-rdo
