@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
+%global sources_gpg_sign 0xa7475c5f2122fec3f90343223fe3bf5aad1080e4
 
 %{!?upstream_version: %global upstream_version %{version}}
 %global upstream_name tripleo-validations
@@ -7,8 +7,8 @@
 
 Name:           openstack-tripleo-validations
 Summary:        Ansible playbooks to detect potential issues with TripleO deployments
-Version:        XXX
-Release:        XXX
+Version:        16.0.0
+Release:        1%{?dist}
 License:        ASL 2.0
 URL:            https://opendev.org/openstack/tripleo-validations
 Source0:        https://tarballs.openstack.org/tripleo-validations/tripleo-validations-%{upstream_version}.tar.gz
@@ -160,4 +160,7 @@ PYTHON=%{__python3} %{__python3} setup.py testr
 %endif
 
 %changelog
+* Thu Nov 03 2022 RDO <dev@lists.rdoproject.org> 16.0.0-1
+- Update to 16.0.0
+
 
