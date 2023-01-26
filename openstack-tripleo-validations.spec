@@ -84,6 +84,8 @@ Requires:       python3-netaddr >= 0.7.18
 Requires:       os-net-config >= 7.1.0
 Requires:       python3-shade >= 1.24.0
 Requires:       python3-ironic-inspector-client >= 3.1.1
+Requires:       tripleo-ansible >= 3.3.1
+Requires:       ansible-collections-openstack >= 1.8.0
 
 Requires:       (python3dist(ansible) >= 2 or ansible-core >= 2.11)
 
