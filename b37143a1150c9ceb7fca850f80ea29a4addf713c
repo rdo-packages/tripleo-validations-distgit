@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bf95e745_5be9e26b",
+        "filename": "openstack-tripleo-validations.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 278
+      },
+      "writtenOn": "2023-02-02T13:50:37Z",
+      "side": 1,
+      "message": "need to be removed",
+      "range": {
+        "startLine": 90,
+        "startChar": 40,
+        "endLine": 90,
+        "endChar": 41
+      },
+      "revId": "b37143a1150c9ceb7fca850f80ea29a4addf713c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
