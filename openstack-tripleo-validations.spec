@@ -20,6 +20,7 @@ Source102:        https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
 
 BuildArch:      noarch
 
+# DNM testing build
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
 BuildRequires:  /usr/bin/gpgv2
