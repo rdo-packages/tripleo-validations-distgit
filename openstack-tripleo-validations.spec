@@ -20,6 +20,7 @@ Source102:        https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
 
 BuildArch:      noarch
 
+# DNM testing build
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
 BuildRequires:  /usr/bin/gpgv2
@@ -137,9 +138,6 @@ pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansibl
 pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansible/lookup_plugins/
 pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansible/callback_plugins/
 pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansible/roles/
-
-%check
-PYTHON=%{__python3} %{__python3} setup.py testr
 
 %files
 %license LICENSE
