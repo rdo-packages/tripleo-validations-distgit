@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "45b17fd2_40c4fe4f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-02-22T10:41:18Z",
+      "side": 1,
+      "message": "build job looks in a weird state i\u0027m abandoning and restoring it to restart the job.",
+      "revId": "8402ff00ee83274a268eef300dd79103492f8790",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
