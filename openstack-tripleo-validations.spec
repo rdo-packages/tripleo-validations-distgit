@@ -139,7 +139,7 @@ pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansibl
 pathfix.py -pni "%{__python3} %{py3_shbang_opts}" %{buildroot}%{_datadir}/ansible/roles/
 
 %check
-PYTHON=%{__python3} %{__python3} setup.py testr
+%{tox} -e py
 
 %files
 %license LICENSE
