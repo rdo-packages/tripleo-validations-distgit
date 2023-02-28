@@ -20,6 +20,8 @@ Source102:        https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
 
 BuildArch:      noarch
 
+#TODO: Remove ansible version caps RHBZ#2170553
+
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
 BuildRequires:  /usr/bin/gpgv2
@@ -33,7 +35,7 @@ BuildRequires:  python3-glanceclient >= 2.9.1
 BuildRequires:  python3-ironicclient >= 2.3.0
 BuildRequires:  /usr/bin/pathfix.py
 
-Requires:       (python3dist(ansible) >= 2 or ansible-core >= 2.11)
+Requires:       python3.9dist(ansible) > 2 
 Requires:       ansible-collection-ansible-posix >= 1.2.0
 Requires:       ansible-collection-community-general >= 2.5.1
 Requires:       ansible-collection-containers-podman >= 1.4.1
@@ -66,7 +68,7 @@ BuildRequires:  python3-testrepository
 BuildRequires:  python3-testscenarios
 BuildRequires:  python3-testtools
 BuildRequires:  os-net-config
-BuildRequires:  (python3dist(ansible) >= 2 or ansible-core >= 2.11)
+BuildRequires:  python3.9dist(ansible) >= 2
 BuildRequires:  openstack-macros
 
 Requires:       python3-subunit
@@ -90,7 +92,7 @@ Requires:       python3-ironic-inspector-client >= 3.1.1
 Requires:       tripleo-ansible >= 3.3.1
 Requires:       ansible-collections-openstack >= 1.8.0
 
-Requires:       (python3dist(ansible) >= 2 or ansible-core >= 2.11)
+Requires:       python3.9dist(ansible) >= 2
 
 %description -n openstack-tripleo-validations-tests
 This package contains the tripleo-validations test files.
