@@ -1,0 +1,10 @@
+Code-Review+2: Alfredo Moralejo <amoralej@redhat.com>
+Code-Review+2: mathieu bultel <mat.bultel@gmail.com>
+Code-Review+2: David J Peacock <david.j.peacock@gmail.com>
+Workflow+1: David J Peacock <david.j.peacock@gmail.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Wed, 01 Mar 2023 12:31:39 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/tripleo-validations-distgit/+/47179
+Project: openstack/tripleo-validations-distgit
+Branch: refs/heads/rpm-master
