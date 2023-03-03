@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6bbd1cbc_a99daad4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-03-03T10:51:35Z",
+      "side": 1,
+      "message": "CBS build fails in doc building because it\u0027s based on last tag which doesn\u0027t have the patch for the doc. I\u0027m merging it manually to fix builds in dlrn as this does not affect the runtime behavior. But it may be good to create a new release of the package including the patch to fix docs building.",
+      "revId": "2ee759b3b4b728d9e8490fbb0e452ceccb77d6c1",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
