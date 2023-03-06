@@ -16,6 +16,23 @@
       "message": "Requires https://review.opendev.org/c/openstack/tripleo-validations/+/876497 in stable/wallaby of tripleo-validations",
       "revId": "4502485d19a2b7f3b2b41e3dd8d6f8b2f1da0d2a",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a01ccb8f_50bf37ab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 717
+      },
+      "writtenOn": "2023-03-06T09:17:11Z",
+      "side": 1,
+      "message": "recheck - dependency merged",
+      "revId": "4502485d19a2b7f3b2b41e3dd8d6f8b2f1da0d2a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
